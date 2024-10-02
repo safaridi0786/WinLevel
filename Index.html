@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title> Win Level Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: #fff;
+        }
+
+        .card-img-overlay {
+            position: relative;
+        }
+
+        h1,
+        h2 {
+            color: #ffc107;
+        }
+
+        .btnStyle {
+            width: 300px;
+            height: 40px;
+            font-size: 14px;
+            font-weight: 700;
+            /* border-radius: 40px; */
+            color: white;
+            background-color: black;
+            border: 1px solid white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .btnStyle:hover {
+            transform: scale(1.1);
+            width: 300px;
+            height: 40px;
+            font-size: 14px;
+            font-weight: 700;
+            /* border-radius: 40px; */
+            color: white;
+            background-color: crimson;
+            border: 1px solid white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+        }
+
+        .styled-heading {
+            text-align: center;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffc107;
+            letter-spacing: 1px;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        .imgBox {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            filter: brightness(0.5);
+        }
+
+        .imgTextBox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .whatsapp-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25D366;
+            color: white;
+            border: 1px solid #25D366;
+            width: 200px;
+            height: 45px;
+            border-radius: 40px;
+            font-size: 16px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-button:hover {
+            background-color: black;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="border-bottom: 1px dashed white;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Win Level</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Terms & Conditions.html">Terms & Conditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Privacy Policy.html">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="m-5">
+        <h2 class="styled-heading">ابھی ڈاؤنلوڈ کریں اور کھیل کر پیسہ کمائیں</h2>
+
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators" style="bottom: -40px;">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-grid gap-3">
+                        <div style="display: flex; justify-content: space-around;">
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/3patti glod.jpeg"
+                                    alt="3 Patti Gold" />
+                                <a href="https://pkteenpattigold.com/?from_gameid=5335501&channelCode=5134402" download>
+                                    <button class="btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download 3Patti Gold
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/pubg mobile.jpg" alt=" PUBG MOBILE"
+                                    style="height: 225px; width: 300px;" />
+                                <a href="https://www.pubgmobile.com/" download>
+                                    <button type="button" class="btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download PUBG MOBILE
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/free fire.jpeg" alt=" Free Fire"
+                                    style="height: 225px; width: 300px;" />
+                                <a href="https://freefire-111dots-studio.en.aptoide.com/" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Free Fire
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/yalla ludo.jpeg"
+                                    style="height: 225px; width: 300px;" alt=" Yalla Ludo" />
+                                <a href="https://www.yallaludo.com/" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Yalla Ludo
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-around;">
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/s9 game.jpeg"
+                                    style="height: 225px; width: 300px;" alt="S9 Game " />
+                                <a href="https://lp.s9.game/m/share?channel=7&userId=1920561&shareCode=1920561&bindCode=700"
+                                    download>
+                                    <button type="button" class="btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download S9 Game
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/3patti blue.jpeg"
+                                    style="height: 225px; width: 300px;" alt="3Patti Blue " />
+                                <a href="https://3pattiblue.com/" download>
+                                    <button type="button" class="btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download 3Patti Blue
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/3patti showy.jpeg"
+                                    style="height: 225px; width: 300px;" alt="3Patti Showy" />
+                                <a href="https://www.memuplay.com/how-to-play-teenpatti-show-on-pc.html" download>
+                                    <button type="button" class="btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download 3Patti Showy
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/teen patti best.jpeg"
+                                    style="height: 225px; width: 300px;" alt="Teen Patti Best " />
+                                <a href="https://apkpure.com/teen-patti-best/in.crazyfungo.tpgo.bestgp" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Teen Patti Best
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-grid gap-3">
+                        <div style="display: flex; justify-content: space-around">
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/3patti sky.jpeg"
+                                    style="height: 225px; width: 300px;" alt="3Patti Sky " />
+                                <a href="https://www.gameloop.com/game/card/3patti-sky----andar-bahar-on-pc" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download 3Patti Sky
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/3 patti room.jpeg"
+                                    style="height: 225px; width: 300px;" alt="3Patti Room " />
+                                <a href="https://www.gameloop.com/game/card/detailedly.whatsoever.ourself" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download 3Patti Room
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/3 patti lucky.jpeg"
+                                    style="height: 225px; width: 300px;" alt=" 3Patti Lucky" />
+                                <a href="https://www.ldplayer.net/games/3patti-lucky-ludo-rummy-on-pc.html" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download 3Patti Lucky
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/3 patti mela.jpeg"
+                                    style="height: 225px; width: 300px;" alt="3Patti Mela" />
+                                <a href="https://apkpure.com/teen-patti-mela/com.Word.king.Tt" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download 3Patti Mela
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-around">
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/3 paati land.jpeg"
+                                    style="height: 225px; width: 300px;" alt="3Patti Land" />
+                                <a href="https://apkpure.com/3patti-land-rummy/com.ysli.gamex.pld" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download 3Patti Land
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/3patti world.jpeg"
+                                    style="height: 225px; width: 300px;" alt="3Patti World" />
+                                <a href="https://www.gameloop.com/game/card/3patti-world---mines-on-pc" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download 3Patti World
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/3 paati loot.jpeg"
+                                    style="height: 225px; width: 300px;" alt="3Patti Loot" />
+                                <a href="https://www.gameloop.com/game/card/3patti-loot-on-pc" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download 3Patti Loot
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/3 patti spin.jpeg"
+                                    style="height: 225px; width: 300px;" alt="3Patti Spin" />
+                                <a href="https://www.gameloop.com/game/card/teen-patti-spin---game-on-pc" downolad>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download 3Patti Spin
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-grid gap-3">
+                        <div style="display: flex; justify-content: space-around">
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/3 patti live.jpeg"
+                                    style="height: 225px; width: 300px;" alt=" 3Patti Live" />
+                                <a href="https://apkpure.com/3patti-live-rummy/advertisement.targeting.marketization"
+                                    download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download 3Patti Live
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/ludo titan.jpeg"
+                                    style="height: 225px; width: 300px;" alt="  Ludo Titan" />
+                                <a href="https://www.apkmonk.com/app/com.gameberry.ludo.star2/" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Ludo Titan
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/grand theft auto v.jpeg"
+                                    style="height: 225px; width: 300px;" alt="Grand Theft Auto V" />
+                                <a href="https://www.bluestacks.com/apps/action/gta-5-mobile-grand-theft-auto-on-pc.html"
+                                    download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Grand Theft Auto V
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/red dead redemption.jpeg"
+                                    style="height: 225px; width: 300px;" alt="Red Dead Redemption 2" />
+                                <a href="https://www.rockstargames.com/downloads" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Red Dead Redemption 2
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-around">
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/minecraft.jpeg"
+                                    style="height: 225px; width: 300px;" alt="Minecraft" />
+                                <a href="https://translate.google.com/" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Minecraft
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/8 ball pool.jpg" alt="8 Ball Pool"
+                                    style="height: 225px; width: 300px;" />
+                                <a href="https://apkpure.com/8-ball-pool-android-1/com.miniclip.eightballpool" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download 8 Ball Pool
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/Cricket league.jpeg"
+                                    alt="Cricket League" style="height: 225px; width: 300px;" />
+                                <a href="https://apkpure.com/cricket-league/com.miniclip.cricketleague" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Cricket League
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/carrom.jpeg" alt="Carrom"
+                                    style="height: 225px; width: 300px;" />
+                                <a href="https://apkpure.com/carrom-pool/com.miniclip.carrom" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Carrom
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-grid gap-3">
+                        <div style="display: flex; justify-content: space-around">
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/call of duty.jpeg"
+                                    style="height: 225px; width: 300px;" alt="Call of Duty: Strike Team" />
+                                <a href="https://apkaward.com/call-of-duty-strike-team-fix-android-10" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Call of Duty: Strike Team
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/big fish casino.jpeg"
+                                    alt="Big Fish Casino" style="height: 225px; width: 300px;" />
+                                <a href="https://big-fish-casino.en.download.it/android" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Big Fish Casino
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/stunt bike.jpeg"
+                                    alt="Stunt Bike Extreme" style="height: 225px; width: 300px;" />
+                                <a href="https://apkpure.com/stunt-bike-extreme/com.hyperkani.trialbike" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Stunt Bike Extreme
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/block blast.jpeg" alt="Block Blast"
+                                    style="height: 225px; width: 300px;" />
+                                <a href="https://apkpure.com/block-blast/com.block.juggle/download" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Block Blast
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-around">
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/rally fury.jpeg"
+                                    style="height: 225px; width: 300px;" alt="Rally Fury-Extreme Racing" />
+                                <a href="https://www.apkmonk.com/app/com.refuelgames.rally/#google_vignette" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Rally Fury-Extreme Racing
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/temple run.jpeg" alt=" Temple Run"
+                                    style="height: 225px; width: 300px;" />
+                                <a href="https://apkpure.com/temple-run/com.imangi.templerun" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Temple Run
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/traffic rider.jpeg"
+                                    alt="Traffic Rider" style="height: 225px; width: 300px;" />
+                                <a href="https://traffic-rider.fileplanet.com/apk" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Traffic Rider
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/angry birds 2.jpeg"
+                                    alt=" Angry Birds 2" style="height: 225px; width: 300px;" />
+                                <a href="https://apkpure.com/angry-birds-2/com.rovio.baba" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Angry Birds 2
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <div class="d-grid gap-3">
+
+                        <div style="display: flex; justify-content: space-around">
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/beach buggy racing.jpeg"
+                                    style="height: 225px; width: 300px;" alt="  Beach Buggy Racing" />
+                                <a href="https://apkpure.com/beach-buggy-racing/com.vectorunit.purple.googleplay"
+                                    download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Beach Buggy Racing
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/royal match.jpeg"
+                                    alt=" Royal Match" style="height: 225px; width: 300px;" />
+                                <a href="https://apkpure.com/royal-match/com.dreamgames.royalmatch" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Royal Match
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/coin master.jpeg" alt="Coin Master"
+                                    style="height: 225px; width: 300px;" />
+                                <a href="https://apkpure.net/coin-master-2l/com.moonactive.coinmaster/download"
+                                    download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Coin Master
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="card" style="background-color: black; border: 1px solid white;">
+                                <img class="card-img-top" src="./assets/Games Images/subway surfers.jpeg"
+                                    alt="Subway Surfers" style="height: 225px; width: 300px;" />
+                                <a href="https://apkpure.com/subway-surfers-1/com.kiloo.subwaysurf" download>
+                                    <button type="button" class="btn btnStyle">
+                                        <i class="bi bi-cloud-arrow-down"></i> Download Subway Surfers
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a> -->
+        </div>
+    </div>
+
+    <div class="imgBox">
+        <img src="./assets/webpic.jpg" alt="Game development banner" class="img">
+        <div class="imgTextBox">
+            <h1 class="styled-heading">ہماری ٹیم مختلف اقسام کی پروفیشنل Websites, Games اور Apps کی ڈویلپمنٹ میں مہارت
+                رکھتی ہے
+                پروفیشنل گیم یا ویب سائٹ بنوانے کے لیے ہم سے رابطہ کریں
+            </h1>
+            <div style="display: flex; justify-content: center;">
+                <a href="https://wa.me/923317491949?text=Hello,%20I%20am%20Suleman%20Ahmad%20Ali%20(Professional Web Developer)."
+                    class="whatsapp-button" target="_blank">
+                    <i class="bi bi-whatsapp" style="font-size: 24px; margin-right: 8px;"></i>
+                    Whatsapp Now
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <h1 class="styled-heading"> ہماری فراہم کردہ خدمات
+    </h1>
+    <div class="card-group m-4 gap-3 text-center">
+        <div class="card" style="border-radius: 10px;">
+            <div class="card-body">
+                <h3 class="card-title">ماہر گیمز، ویب اور ایپ ڈیولپر</h3>
+                <p class="card-text">میرا تجربہ پرفارمنس کے چیلنجز کا سامنا کرنے، مؤثر الگورڈمز کو نافذ کرنے، اور دلچسپ
+                    بصریات اور آڈیو کو مربوط کرنے میں شامل ہے جو گیمز، ویب، اور ایپس کے تجربے کو بلند کرتی ہیں</p>
+            </div>
+        </div>
+        <div class="card" style="border-radius: 10px;">
+            <div class="card-body">
+                <h3 class="card-title">لامحدود رسائی</h3>
+                <p class="card-text">تخلیقی خیالات کو دریافت کرنے اور جدید خصوصیات کو نافذ کرنے کے لیے جدید ترین ٹولز،
+                    APIs، اور ترقیاتی فریم ورک تک رسائی</p>
+            </div>
+        </div>
+        <div class="card" style="border-radius: 10px;">
+            <div class="card-body">
+                <h3 class="card-title">24/7 آن لائن سپورٹ</h3>
+                <p class="card-text">ڈویلپرز کسی بھی وقت مدد حاصل کر سکتے ہیں، تاکہ ترقی کے دوران آنے والے تکنیکی چیلنجز
+                    یا سوالات کو بغیر کسی تاخیر کے حل کیا جا سکے</p>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="styled-heading">ویب اور ایپ ترقی کے لیے پلیٹ فارم</h1>
+    <div class="card-group m-4 gap-3 text-center">
+        <div class="card" style="border-radius: 10px;">
+            <img src="./assets/web.png" style="height: 250px; padding: 5px;" alt="Web development">
+            <div class="card-body">
+                <h3 class="card-title">ویب ڈویلپمنٹ</h3>
+                <p class="card-text">ویب ڈویلپمنٹ کا مطلب ہے ویب سائٹس یا ویب ایپلی کیشنز بنانا اور تیار کرنا۔ اس میں
+                    ویب صفحات کو ڈیزائن کرنا، کوڈ لکھنا، اور ویب سائٹ کو انٹرنیٹ پر چلانے کے لیے تیار کرنا شامل ہے۔ ویب
+                    ڈویلپمنٹ میں بنیادی طور پر تین چیزیں اہم ہوتی ہیں: فرنٹ اینڈ (جو صارف دیکھتا ہے)، بیک اینڈ (جو ڈیٹا
+                    اور فنکشنز کو سنبھالتا ہے)، اور ڈیٹابیس۔</p>
+            </div>
+        </div>
+        <div class="card" style="border-radius: 10px; padding: 5px;">
+            <img src="./assets/android.jpg" alt="Android Studio" style="height: 250px;">
+            <div class="card-body">
+                <h3 class="card-title">اینڈرائیڈ اسٹوڈیو</h3>
+                <p class="card-text">Android Studio ایک ایسا سافٹ ویئر ہے جو اینڈرائیڈ ایپس بنانے کے لیے استعمال ہوتا
+                    ہے۔ اس میں ڈویلپرز کے لیے مختلف ٹولز اور فیچرز ہوتے ہیں جو انہیں آسانی سے ایپس ڈیزائن، کوڈ اور ٹیسٹ
+                    کرنے میں مدد دیتے ہیں۔ اس کا استعمال جاوا، کوٹلن، یا سی++ جیسی زبانوں میں اینڈرائیڈ ایپلی کیشنز
+                    بنانے کے لیے کیا جاتا ہے</p>
+            </div>
+        </div>
+        <div class="card" style="border-radius: 10px;">
+            <img src="./assets/vscode.jpeg" alt="Visual Studio Code" style="height: 250px; padding: 5px;">
+            <div class="card-body">
+                <h3 class="card-title">ویژول اسٹوڈیو کوڈ</h3>
+                <p class="card-text">Visual Studio ایک طاقتور سافٹ ویئر ڈویلپمنٹ ٹول ہے جسے مختلف پروگرامنگ زبانوں جیسے
+                    C#, C++, Python، اور دیگر زبانوں میں ایپلی کیشنز اور سافٹ ویئر بنانے کے لیے استعمال کیا جاتا ہے۔ یہ
+                    ڈویلپرز کو کوڈ لکھنے، ڈیبگ کرنے، اور مختلف پلیٹ فارمز جیسے ونڈوز، ویب، اور موبائل کے لیے ایپلی کیشنز
+                    بنانے میں مدد فراہم کرتا ہے۔ Visual Studio </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card m-4" style="border: none;">
+        <img src="./assets/code1.jpg" alt="Professional Web Developers">
+        <!-- <div class="card-img-overlay">
+            <h1>Android Game Developers</h1>
+            <button type="button" class="btn btn-info">More About Us</button>
+        </div> -->
+    </div>
+
+    <div class="card-group m-4 gap-3 text-center">
+        <div class="card">
+            <img src="./assets/imrankhan.webp" style="padding: 5px;" alt="Review 1">
+            <div class="card-body">
+                <p class="card-text">
+
+                    <span style="font-weight: 700;">
+                        إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ
+                    </span> <br /> "اگر آپ صحیح نیت سے کام کریں گے، تو اللہ کی مدد آپ کے ساتھ ہوگی"۔ یہ بات خاص طور پر
+                    آن لائن کاروبار یا ویب سائٹس کے ذریعے کمائی کے لیے بھی اہم ہے۔ اگر آپ اپنی محنت کے ساتھ ساتھ اپنے
+                    ارادوں کو بھی صاف رکھیں، تو کامیابی آپ کی دسترس میں ہوگی۔
+                </p>
+                <h5 class="card-title">Imran Khan</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./assets/babarAzam.jpg" style="padding: 5px;" alt="Review 1">
+            <div class="card-body">
+                <p class="card-text">
+                    <span style="font-weight: 700;">
+                        "کرکٹ میں ہر دن نیا ہوتا ہے، سیکھنا کبھی ختم نہیں ہوتا"
+                    </span><br /> ویب سائٹس کے ذریعے پیسہ
+                    کمانا ایک ایسا ہی سفر ہے۔ اگر آپ مستقل مزاجی سے کام کرتے رہیں اور اپنے ہدف پر توجہ مرکوز رکھیں، تو
+                    کامیابی آپ کا مقدر بنے گی، بالکل ویسے ہی جیسے بابر اعظم نے کرکٹ کی دنیا میں نام کمایا ہے۔
+                </p>
+                <h5 class="card-title">Babar Azam</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./assets/ferozkhan.webp" style="padding: 5px;" alt="Review 1">
+            <div class="card-body">
+                <p class="card-text">
+                    <span style="font-weight: 700;">
+                        "کامیابی کا مطلب شہرت یا دولت نہیں، بلکہ دل کا سکون اور اللہ کا قرب ہے"
+                    </span><br /> فیروز خان کا کہنا ہے کہ زندگی میں ہر کام کو اپنے مقصد اور مثبت سوچ کے ساتھ کریں، چاہے
+                    وہ اداکاری ہو یا آن لائن بزنس۔ "آپ کا مقصد صرف دولت نہیں ہونا چاہیے بلکہ ایسی کامیابی ہونی چاہیے جو
+                    آپ کی زندگی میں سکون اور برکت لائے"۔
+                </p>
+                <h5 class="card-title">Feroz Khan</h5>
+            </div>
+        </div>
+
+    </div>
+    <hr />
+    <footer class="container-fluid mt-4 text-center">
+        <p>Copyright © 2024 Win Level Game.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
